@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TO-DO LIST APP!"
+        android:textColor="@color/colorPrimaryLight"
+        android:background="@color/colorPrimaryDark"
+        android:padding="12sp"
+        android:textSize="30sp"
+        android:layout_gravity="center_horizontal"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Long-press an item to remove it."
+        android:layout_gravity="center_horizontal"
+        android:textSize="12sp"
+        android:paddingTop="5sp"/>
+</LinearLayout>
