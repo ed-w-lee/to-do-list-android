@@ -26,9 +26,10 @@
         android:id="@+id/no_tasks"/>
 
     <ListView
+        android:paddingTop="10sp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@android:id/list">
+        android:id="@+id/todo_list">
 
     </ListView>
 </LinearLayout>

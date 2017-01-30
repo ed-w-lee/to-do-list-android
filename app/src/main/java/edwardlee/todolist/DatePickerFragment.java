@@ -31,6 +31,7 @@ public class DatePickerFragment extends DialogFragment
 
     @Override
     public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+        month++; // Months are 0->Jan, so change to 1->Jan
         ((TextView) getActivity().findViewById(R.id.due_day)).setText("" + dayOfMonth);
         ((TextView) getActivity().findViewById(R.id.due_month)).setText("" + month);
         ((TextView) getActivity().findViewById(R.id.due_year)).setText("" + year);

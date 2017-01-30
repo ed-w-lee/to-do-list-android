@@ -42,11 +42,13 @@ public class addToList extends AppCompatActivity {
         // If date was input, put into intent
         if(!isDateEmpty(sYear, sMonth, sDay)) {
             if (!checkDate(sYear, sMonth, sDay)) {
-                return;
+                intent.putExtra(DATE_MESSAGE, "");
             } else {
                 intent.putExtra(DATE_MESSAGE, toDate(sYear, sMonth, sDay));
             }
         }
+
+        System.out.println(toDate("2000", "1", "2"));
 
         setResult(RESULT_OK, intent);
         finish();
@@ -62,10 +64,10 @@ public class addToList extends AppCompatActivity {
     // Makes sure month and day are standardized to 2 digits
     // e.g. 1995-7-9 --> 1995-07-09
     private String toDate(String year, String month, String day) {
-        if (month.length() == 0) {
+        if (month.length() == 1) {
             month = "0" + month;
         }
-        if (day.length() == 0) {
+        if (day.length() == 1) {
             day = "0" + day;
         }
         return year + "-" + month + "-" + day;
